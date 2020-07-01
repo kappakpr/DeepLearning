@@ -1,4 +1,37 @@
-ubuntu pycharm keras Exception: URL fetch failure on resnet50_weights_tf_dim_ordering_tf_kernels.h5: None -- [Errno -3] Temporary failure in name resolution
+ubuntu pycharm keras Exception: URL fetch failure on resnet50_weights_tf_dim_ordering_tf_kernels.h5: None -- [Errno -3] Temporary failure in name resolution.
+
+Updated the data_utils.py file following this resolultion,https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000117730-SSL-error-in-accessing-MNIST-dataset.
+On re-running the image_recognition_final.py still had the same problem.
+
+========================================================================================
+Avatar
+CRLannister
+Created October 13, 2019 02:44
+Comment actions
+
+ Incase of linux...
+go to .local/python3.X/lib/python3.6/site-packages/keras/utils/data_utils.py
+
+ and below import statements add these----
+
+```
+
+import requests
+requests.packages.urllib3.disable_warnings()
+import ssl
+
+try:
+_create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+# Legacy Python that doesn't verify HTTPS certificates by default
+pass
+else:
+# Handle target environment that doesn't support HTTPS verification
+ssl._create_default_https_context = _create_unverified_https_context
+```
+
+ now try new instance of python and ..hopefully it works 
+=====================================================================================
 
 Resolved by running the .py file directly from command terminal and the .h5 model was downloaded. Re-running the program from pycharm worked successfully.
 
