@@ -1,5 +1,36 @@
 ubuntu pycharm keras Exception: URL fetch failure on resnet50_weights_tf_dim_ordering_tf_kernels.h5: None -- [Errno -3] Temporary failure in name resolution.
 
+==================================================================================== Error Details Begin ========================================
+
+Downloading data from https://github.com/fchollet/deep-learning-models/releases/download/v0.2/resnet50_weights_tf_dim_ordering_tf_kernels.h5
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/urllib/request.py", line 1324, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib/python3.7/http/client.py", line 1262, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1308, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1257, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.7/http/client.py", line 1028, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.7/http/client.py", line 968, in send
+    self.connect()
+  File "/usr/lib/python3.7/http/client.py", line 1424, in connect
+    super().connect()
+  File "/usr/lib/python3.7/http/client.py", line 940, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/keras/utils/data_utils.py", line 233, in get_file
+======================================================================================= Error Details End ========================================
+
+
 Updated the data_utils.py file following this resolultion,https://intellij-support.jetbrains.com/hc/en-us/community/posts/360000117730-SSL-error-in-accessing-MNIST-dataset.
 On re-running the image_recognition_final.py still had the same problem.
 
