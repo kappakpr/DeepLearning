@@ -3,7 +3,11 @@ import PIL.ImageDraw
 import face_recognition
 
 # Load the jpg file into a numpy array
+<<<<<<< HEAD
 image = face_recognition.load_image_file("stock1.jpg")
+=======
+image = face_recognition.load_image_file("people.jpg")
+>>>>>>> b30b16bfb0484134c76ff0ab8c3989deee084282
 
 # Find all facial features in all the faces in the image
 face_landmarks_list = face_recognition.face_landmarks(image)

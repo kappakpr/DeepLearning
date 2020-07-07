@@ -3,7 +3,11 @@ import PIL.ImageDraw
 import face_recognition
 
 # Load the jpg file into a numpy array
+<<<<<<< HEAD
 image = face_recognition.load_image_file("baby1.jpg")
+=======
+image = face_recognition.load_image_file("people.jpg")
+>>>>>>> b30b16bfb0484134c76ff0ab8c3989deee084282
 
 # Find all the faces in the image
 face_locations = face_recognition.face_locations(image)
