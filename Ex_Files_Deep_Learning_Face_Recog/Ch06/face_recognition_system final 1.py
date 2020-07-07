@@ -1,3 +1,4 @@
+#loops through all the .jpg files in the directory and checks against person_1, person_2, person-3
 import face_recognition
 import os
 
@@ -18,7 +19,7 @@ known_face_encodings = [
     person_3_face_encoding
 ]
 
-# Load the image we want to check
+# Load the image we want to check, loop through the directory for all .jpg files
 directory = r'.'
 for unknown_file in os.listdir(directory):
     if unknown_file.endswith(".jpg"):
