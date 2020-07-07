@@ -21,6 +21,7 @@ known_face_encodings = [
 unknown_image = face_recognition.load_image_file("unknown_7.jpg")
 
 # Get face encodings for any people in the picture
+# scaling the image to detect the small size face
 face_locations = face_recognition.face_locations(unknown_image, number_of_times_to_upsample=2)
 unknown_face_encodings = face_recognition.face_encodings(unknown_image, known_face_locations=face_locations)
 

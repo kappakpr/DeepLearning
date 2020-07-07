@@ -1,5 +1,6 @@
 #loops through all the .jpg files in the directory and checks against person_1, person_2, person-3
 #unknown_5.jpg also has three faces, but algorithm could identify only persons 1 & 3.
+#unknown_7.jpg is too small to detect faces with this code
 
 import face_recognition
 import os

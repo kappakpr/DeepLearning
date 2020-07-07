@@ -11,6 +11,7 @@ face_landmarks_list = face_recognition.face_landmarks(image)
 pil_image = Image.fromarray(image)
 
 # Create a PIL drawing object to be able to draw lines later
+#4th parameter A to control image transparency
 d = ImageDraw.Draw(pil_image, 'RGBA')
 
 for face_landmarks in face_landmarks_list:
