@@ -22,6 +22,7 @@ known_face_encodings = [
 # Load the image we want to check, loop through the directory for all .jpg files
 directory = r'.'
 for unknown_file in os.listdir(directory):
+    # .jpg filter
     if unknown_file.endswith(".jpg"):
         unknown_image = face_recognition.load_image_file(unknown_file)
 
