@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style="" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.1. CMake Installation — CGold 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/theme.css" type="text/css">
+  <link rel="stylesheet" href="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/pygments.css" type="text/css">
+  <link rel="stylesheet" href="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/custom.css" type="text/css">
+  <link rel="stylesheet" href="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/rtfd-css.css" type="text/css">
+    <link rel="next" title="2.2. Native build tool" href="https://cgold.readthedocs.io/en/latest/first-step/native-build-tool.html">
+    <link rel="prev" title="2. First step" href="https://cgold.readthedocs.io/en/latest/first-step.html"> 
+
+  
+  <script async="" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/analytics.js"></script><script src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/modernizr.js"></script>
+
+
+<!-- RTD Extra Head -->
+
+<!-- 
+Always link to the latest version, as canonical.
+http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="https://cgold.readthedocs.io/en/latest/first-step/installation.html">
+
+<link rel="stylesheet" href="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/readthedocs-doc-embed.css" type="text/css">
+
+<script type="text/javascript" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/readthedocs-data.js"></script>
+
+<!-- Add page-specific data, which must exist in the page js, not global -->
+<script type="text/javascript">
+READTHEDOCS_DATA['page'] = "first-step/installation"
+READTHEDOCS_DATA['source_suffix'] = ".rst"
+</script>
+
+<script type="text/javascript" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/readthedocs-analytics.js" async="async"></script>
+
+<!-- end RTD <extrahead> -->
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="https://cgold.readthedocs.io/en/latest/index.html" class="icon icon-home"> CGold
+          
+
+          
+          </a>
+
+          
+            
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/overview.html">1. Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/first-step.html"><span class="toctree-expand"></span>2. First step</a><ul class="">
+<li class="toctree-l2 current"><a class="reference internal current" href="#"><span class="toctree-expand"></span>2.1. CMake Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ubuntu">2.1.1. Ubuntu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#os-x"><span class="toctree-expand"></span>2.1.2. OS X</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dmg-installer">2.1.2.1. DMG installer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#windows">2.1.3. Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/first-step/native-build-tool.html">2.2. Native build tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/first-step/compiler.html">2.3. Compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/first-step/minimal-example.html">2.4. Minimal example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/first-step/generate-native-tool.html">2.5. Generate native tool files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/first-step/run-executable.html">2.6. Build and run executable</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/tutorials.html">3. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/platforms.html">4. Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/generators.html">5. Generators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/compilers.html">6. Compilers</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/contacts.html">Contacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/rejected.html">Rejected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://cgold.readthedocs.io/en/latest/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      <div id="rtd-mf7wjf4j" class="ethical-rtd ethical-dark-theme"><div class="ethical-sidebar"><div class="ethical-content"><a href="https://server.ethicalads.io/proxy/click/1041/RPCRGTrMZ8Q110sn/" rel="nofollow" target="_blank" class="ethical-image-link"><img src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/triplebyte-2_Aq0DIFf_qWmakDX_zlXG7UC.png"></a><div class="ethical-text"><a href="https://server.ethicalads.io/proxy/click/1041/RPCRGTrMZ8Q110sn/" rel="nofollow" target="_blank">Beat Triplebyte's online coding quiz. Get offers from top companies. Skip resumes &amp; recruiters.</a></div></div><div class="ethical-callout"><small><em><a href="https://readthedocs.org/sustainability/advertising/">Sponsored</a><span> · </span><a href="https://docs.readthedocs.io/en/latest/ethical-advertising.html">Ads served ethically</a></em></small></div></div><img src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/a.svg" style="display: none;"></div></div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="https://cgold.readthedocs.io/en/latest/index.html">CGold</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="https://cgold.readthedocs.io/en/latest/index.html">Docs</a> »</li>
+        
+          <li><a href="https://cgold.readthedocs.io/en/latest/first-step.html">2. First step</a> »</li>
+        
+      <li>2.1. CMake Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/ruslo/CGold/blob/master/docs/first-step/installation.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cmake-installation">
+<h1>2.1. CMake Installation<a class="headerlink" href="#cmake-installation" title="Permalink to this headline">¶</a></h1>
+<blockquote class="epigraph">
+<div><div class="line-block">
+<div class="line"><em>That’s it, ground.</em></div>
+<div class="line"><em>I wonder if it will be friends with me?</em></div>
+<div class="line"><em>Hello, ground!</em></div>
+<div class="line"><a class="reference external" href="https://www.youtube.com/watch?v=h02a2HSB58M"><em>– Whale</em></a></div>
+</div>
+</div></blockquote>
+<p>Obviously to use some tool you need to install it first. CMake can be installed
+using default system package manager or by getting binaries from
+<a class="reference external" href="https://cmake.org/download/">Download page</a>.</p>
+<div class="section" id="ubuntu">
+<h2>2.1.1. Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h2>
+<p>CMake can be installed by <code class="docutils literal"><span class="pre">apt-get</span></code>:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&gt; sudo apt-get -y install cmake
+&gt; which cmake
+/usr/bin/cmake
+&gt; cmake --version
+cmake version 2.8.12.2
+</pre></div>
+</div>
+<p>Installing CMake GUI is similar:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&gt; sudo apt-get -y install cmake-qt-gui
+&gt; which cmake-gui
+/usr/bin/cmake-gui
+&gt; cmake-gui --version
+cmake version 2.8.12.2
+</pre></div>
+</div>
+<p>Binaries can be downloaded and unpacked manually to any location:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&gt; wget https://cmake.org/files/v3.4/cmake-3.4.1-Linux-x86_64.tar.gz
+&gt; tar xf cmake-3.4.1-Linux-x86_64.tar.gz
+&gt; export PATH="`pwd`/cmake-3.4.1-Linux-x86_64/bin:$PATH" # save it in .bashrc if needed
+&gt; which cmake
+/.../cmake-3.4.1-Linux-x86_64/bin/cmake
+&gt; which cmake-gui
+/.../cmake-3.4.1-Linux-x86_64/bin/cmake-gui
+</pre></div>
+</div>
+<p>Version:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&gt; cmake --version
+cmake version 3.4.1
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+&gt; cmake-gui --version
+cmake version 3.4.1
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake)
+</pre></div>
+</div>
+</div>
+<div class="section" id="os-x">
+<h2>2.1.2. OS X<a class="headerlink" href="#os-x" title="Permalink to this headline">¶</a></h2>
+<p>CMake can be installed on Mac using <a class="reference external" href="http://brew.sh/">brew</a>:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&gt; brew install cmake
+&gt; which cmake
+/usr/local/bin/cmake
+&gt; cmake --version
+cmake version 3.4.1
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake)
+</pre></div>
+</div>
+<p>Binaries can be downloaded and unpacked manually to any location:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&gt; wget https://cmake.org/files/v3.4/cmake-3.4.1-Darwin-x86_64.tar.gz
+&gt; tar xf cmake-3.4.1-Darwin-x86_64.tar.gz
+&gt; export PATH="`pwd`/cmake-3.4.1-Darwin-x86_64/CMake.app/Contents/bin:$PATH"
+&gt; which cmake
+/.../cmake-3.4.1-Darwin-x86_64/CMake.app/Contents/bin/cmake
+&gt; which cmake-gui
+/.../cmake-3.4.1-Darwin-x86_64/CMake.app/Contents/bin/cmake-gui
+</pre></div>
+</div>
+<p>Version:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&gt; cmake --version
+cmake version 3.4.1
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+&gt; cmake-gui --version
+cmake version 3.4.1
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+</pre></div>
+</div>
+<div class="section" id="dmg-installer">
+<h3>2.1.2.1. DMG installer<a class="headerlink" href="#dmg-installer" title="Permalink to this headline">¶</a></h3>
+<p>Download <code class="docutils literal"><span class="pre">cmake-*.dmg</span></code> installer from
+<a class="reference external" href="https://cmake.org/download/">Download page</a> and run it.</p>
+<p>Click <code class="docutils literal"><span class="pre">Agree</span></code>:</p>
+<img alt="../_images/01-agree.png" class="align-center" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/01-agree.png">
+<p>Drag <code class="docutils literal"><span class="pre">CMake.app</span></code> to <code class="docutils literal"><span class="pre">Applications</span></code> folder (or any other location):</p>
+<img alt="../_images/02-drag.png" class="align-center" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/02-drag.png">
+<p>Start <code class="docutils literal"><span class="pre">Launchpad</span></code>:</p>
+<img alt="../_images/03-launchpad.png" class="align-center" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/03-launchpad.png">
+<p>Find <code class="docutils literal"><span class="pre">CMake</span></code> and launch it:</p>
+<img alt="../_images/04-search-cmake.png" class="align-center" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/04-search-cmake.png">
+</div>
+</div>
+<div class="section" id="windows">
+<h2>2.1.3. Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<p>Download <code class="docutils literal"><span class="pre">cmake-*.exe</span></code> installer from
+<a class="reference external" href="https://cmake.org/download/">Download page</a> and run it.</p>
+<p>Click <code class="docutils literal"><span class="pre">Next</span></code>:</p>
+<img alt="../_images/installer-01.png" class="align-center" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/installer-01.png">
+<p>Click <code class="docutils literal"><span class="pre">I</span> <span class="pre">agree</span></code>:</p>
+<img alt="../_images/installer-02.png" class="align-center" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/installer-02.png">
+<p>Check one of the <code class="docutils literal"><span class="pre">Add</span> <span class="pre">CMake</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">system</span> <span class="pre">PATH</span> <span class="pre">...</span></code> if you want to have
+CMake in <code class="docutils literal"><span class="pre">PATH</span></code>. Check <code class="docutils literal"><span class="pre">Create</span> <span class="pre">CMake</span> <span class="pre">Desktop</span> <span class="pre">Icon</span></code> to create icon on
+desktop:</p>
+<img alt="../_images/installer-03.png" class="align-center" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/installer-03.png">
+<p>Choose installation path. Add suffix with version in case you want to have
+several versions installed simultaneously:</p>
+<img alt="../_images/installer-04.png" class="align-center" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/installer-04.png">
+<p>Shortcut in Start Menu folder:</p>
+<img alt="../_images/installer-05.png" class="align-center" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/installer-05.png">
+<p>Installing...</p>
+<img alt="../_images/installer-06.png" class="align-center" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/installer-06.png">
+<p>Click Finish:</p>
+<img alt="../_images/installer-07.png" class="align-center" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/installer-07.png">
+<p>Desktop icon created:</p>
+<img alt="../_images/desktop-icon.png" class="align-center" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/desktop-icon.png">
+<p>If you set <code class="docutils literal"><span class="pre">Add</span> <span class="pre">CMake</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">system</span> <span class="pre">PATH</span> <span class="pre">...</span></code> checkbox then CMake can be
+accessed via
+<a class="reference external" href="http://smallbusiness.chron.com/open-terminal-session-windows-7-56627.html">terminal</a>
+(otherwise you need to add <code class="docutils literal"><span class="pre">...\bin</span></code> to
+<a class="reference external" href="http://www.computerhope.com/issues/ch000549.htm">PATH environment variable</a>):</p>
+<div class="highlight-batch"><div class="highlight"><pre><span></span><span class="p">&gt;</span> where cmake
+C<span class="p">:</span><span class="nl">\soft\develop\cmake\3.4.1\bin\cmake.exe</span>
+
+<span class="p">&gt;</span> where cmake-gui
+C<span class="p">:</span><span class="nl">\soft\develop\cmake\3.4.1\bin\cmake-gui.exe</span>
+
+<span class="p">&gt;</span> cmake --version
+cmake version 3.4.1
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference external" href="https://cmake.org/install/">Installing CMake</a></li>
+<li><a class="reference external" href="http://askubuntu.com/questions/610291/how-to-install-cmake-3-2-on-ubuntu-14-04">How to install cmake 3.2 on ubuntu 14.04?</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="https://cgold.readthedocs.io/en/latest/first-step/native-build-tool.html" class="btn btn-neutral float-right" title="2.2. Native build tool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="https://cgold.readthedocs.io/en/latest/first-step.html" class="btn btn-neutral" title="2. First step" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr><div><div id="rtd-6i4hohcq" class="ethical-rtd"></div></div>
+
+  <div role="contentinfo">
+    <p>
+        © Copyright 2015-2019, Ruslan Baratov.
+      
+        <span class="commit">
+          Revision <code>64b7c4dc</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions"><!-- Inserted RTD Footer -->
+
+<div class="injected">
+
+  
+
+      
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+         <strong> 
+        <dd><a href="https://cgold.readthedocs.io/en/latest/first-step/installation.html">latest</a></dd>
+         </strong> 
+        
+      </dl>
+      
+      
+
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+        <dd><a href="https://cgold.readthedocs.io/_/downloads/en/latest/pdf/">PDF</a></dd>
+        
+        <dd><a href="https://cgold.readthedocs.io/_/downloads/en/latest/htmlzip/">HTML</a></dd>
+        
+        <dd><a href="https://cgold.readthedocs.io/_/downloads/en/latest/epub/">Epub</a></dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        
+        <!-- These are kept as relative links for internal installs that are http -->
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href="https://readthedocs.org/projects/cgold/">Project Home</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/cgold/builds/">Builds</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/cgold/downloads/">Downloads</a>
+        </dd>
+      </dl>
+      
+
+      
+
+      
+      <dl>
+        <dt>On GitHub</dt>
+        <dd>
+          <a href="https://github.com/ruslo/CGold/blob/master/docs/first-step/installation.rst">View</a>
+        </dd>
+        
+        <dd>
+          <a href="https://github.com/ruslo/CGold/edit/master/docs/first-step/installation.rst">Edit</a>
+        </dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        <dt>Search</dt>
+        <dd>
+          <div style="padding: 6px;">
+            
+            <form id="flyout-search-form" class="wy-form" target="_blank" action="//readthedocs.org/projects/cgold/search/" method="get">
+              <input type="text" name="q" placeholder="Search docs">
+              </form>
+          </div>
+        </dd>
+      </dl>
+      
+
+      
+      
+
+      <hr>
+      
+        <small>
+          <span>Hosted by <a href="https://readthedocs.org/">Read the Docs</a></span>
+          <span> · </span>
+          <a href="https://docs.readthedocs.io/page/privacy-policy.html">Privacy Policy</a>
+        </small>
+      
+
+      
+
+</div>
+</div>
+  </div>
+
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/jquery.js"></script>
+      <script type="text/javascript" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/underscore.js"></script>
+      <script type="text/javascript" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/doctools.js"></script>
+      <script type="text/javascript" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/readthedocs-doc-embed.js"></script>
+
+  
+
+  <script type="text/javascript" src="2.1.%20CMake%20Installation%20%E2%80%94%20CGold%200.1%20documentation_files/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+
+<div id="rtd-kxdc0ec2"></div></body></html>

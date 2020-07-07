@@ -1,0 +1,690 @@
+pk@ubuntuwork:~/git/DeepLearning$ sudo apt-get -y install cmake
+[sudo] password for pk: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  cmake-data libjsoncpp1 librhash0 libuv1
+Suggested packages:
+  cmake-doc ninja-build
+The following NEW packages will be installed:
+  cmake cmake-data libjsoncpp1 librhash0 libuv1
+0 upgraded, 5 newly installed, 0 to remove and 27 not upgraded.
+Need to get 5,376 kB of archives.
+After this operation, 27.6 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 cmake-data all 3.13.4-1build1 [1,458 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libjsoncpp1 amd64 1.7.4-3 [73.6 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 librhash0 amd64 1.3.8-1 [113 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libuv1 amd64 1.30.1-1 [72.6 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 cmake amd64 3.13.4-1build1 [3,659 kB]
+Fetched 5,376 kB in 1s (3,990 kB/s)
+Selecting previously unselected package cmake-data.
+(Reading database ... 247774 files and directories currently installed.)
+Preparing to unpack .../cmake-data_3.13.4-1build1_all.deb ...
+Unpacking cmake-data (3.13.4-1build1) ...
+Selecting previously unselected package libjsoncpp1:amd64.
+Preparing to unpack .../libjsoncpp1_1.7.4-3_amd64.deb ...
+Unpacking libjsoncpp1:amd64 (1.7.4-3) ...
+Selecting previously unselected package librhash0:amd64.
+Preparing to unpack .../librhash0_1.3.8-1_amd64.deb ...
+Unpacking librhash0:amd64 (1.3.8-1) ...
+Selecting previously unselected package libuv1:amd64.
+Preparing to unpack .../libuv1_1.30.1-1_amd64.deb ...
+Unpacking libuv1:amd64 (1.30.1-1) ...
+Selecting previously unselected package cmake.
+Preparing to unpack .../cmake_3.13.4-1build1_amd64.deb ...
+Unpacking cmake (3.13.4-1build1) ...
+Setting up libuv1:amd64 (1.30.1-1) ...
+Setting up librhash0:amd64 (1.3.8-1) ...
+Setting up cmake-data (3.13.4-1build1) ...
+Setting up libjsoncpp1:amd64 (1.7.4-3) ...
+Setting up cmake (3.13.4-1build1) ...
+Processing triggers for man-db (2.8.7-3) ...
+Processing triggers for libc-bin (2.30-0ubuntu2.1) ...
+pk@ubuntuwork:~/git/DeepLearning$ sudo apt update
+Get:1 http://security.ubuntu.com/ubuntu eoan-security InRelease [97.5 kB]      
+Get:2 http://security.ubuntu.com/ubuntu eoan-security/main amd64 Packages [240 kB]
+Get:3 http://security.ubuntu.com/ubuntu eoan-security/main i386 Packages [148 kB]
+Get:4 http://security.ubuntu.com/ubuntu eoan-security/main Translation-en [83.6 kB]
+Get:5 http://security.ubuntu.com/ubuntu eoan-security/main amd64 DEP-11 Metadata [27.0 kB]
+Get:6 http://security.ubuntu.com/ubuntu eoan-security/universe amd64 DEP-11 Metadata [39.0 kB]
+Hit:7 http://dl.google.com/linux/chrome/deb stable InRelease                   
+Hit:8 http://us.archive.ubuntu.com/ubuntu eoan InRelease              
+Get:9 http://us.archive.ubuntu.com/ubuntu eoan-updates InRelease [97.5 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu eoan-backports InRelease [88.8 kB]  
+Get:11 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 DEP-11 Metadata [79.3 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu eoan-updates/universe amd64 DEP-11 Metadata [63.8 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu eoan-backports/universe amd64 DEP-11 Metadata [7,748 B]
+Fetched 972 kB in 31s (31.4 kB/s)                                              
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+28 packages can be upgraded. Run 'apt list --upgradable' to see them.
+pk@ubuntuwork:~/git/DeepLearning$ sudo apt upgrade
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+The following NEW packages will be installed:
+  linux-headers-5.3.0-62 linux-headers-5.3.0-62-generic
+  linux-image-5.3.0-62-generic linux-modules-5.3.0-62-generic
+  linux-modules-extra-5.3.0-62-generic
+The following packages will be upgraded:
+  apport apport-gtk aptdaemon aptdaemon-data chromium-codecs-ffmpeg-extra
+  dmeventd dmsetup google-chrome-stable libdevmapper-event1.02.1
+  libdevmapper1.02.1 liblvm2cmd2.03 libnetplan0 libvncclient1 linux-generic
+  linux-headers-generic linux-image-generic linux-libc-dev lvm2 netplan.io
+  python-apt-common python3-apport python3-apt python3-aptdaemon
+  python3-aptdaemon.gtk3widgets python3-problem-report python3-update-manager
+  update-manager update-manager-core
+28 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 74.6 MB/147 MB of archives.
+After this operation, 358 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://security.ubuntu.com/ubuntu eoan-security/main amd64 libvncclient1 amd64 0.9.11+dfsg-1.3ubuntu0.1 [58.2 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 linux-modules-5.3.0-62-generic amd64 5.3.0-62.56 [14.5 MB]
+Get:3 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 linux-image-5.3.0-62-generic amd64 5.3.0-62.56 [8,667 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 linux-modules-extra-5.3.0-62-generic amd64 5.3.0-62.56 [38.1 MB]
+Get:5 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 linux-generic amd64 5.3.0.62.52 [1,860 B]
+Get:6 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 linux-image-generic amd64 5.3.0.62.52 [2,712 B]
+Get:7 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 linux-headers-5.3.0-62 all 5.3.0-62.56 [11.0 MB]
+Get:8 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 linux-headers-5.3.0-62-generic amd64 5.3.0-62.56 [1,239 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 linux-headers-generic amd64 5.3.0.62.52 [2,580 B]
+Get:10 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 linux-libc-dev amd64 5.3.0-62.56 [1,123 kB]
+Fetched 74.6 MB in 26s (2,856 kB/s)                                            
+Extracting templates from packages: 100%
+(Reading database ... 250341 files and directories currently installed.)
+Preparing to unpack .../00-google-chrome-stable_83.0.4103.116-1_amd64.deb ...
+Unpacking google-chrome-stable (83.0.4103.116-1) over (81.0.4044.138-1) ...
+Preparing to unpack .../01-libdevmapper1.02.1_2%3a1.02.155-2ubuntu6.1_amd64.deb 
+...
+Unpacking libdevmapper1.02.1:amd64 (2:1.02.155-2ubuntu6.1) over (2:1.02.155-2ubu
+ntu6) ...
+Preparing to unpack .../02-dmsetup_2%3a1.02.155-2ubuntu6.1_amd64.deb ...
+Unpacking dmsetup (2:1.02.155-2ubuntu6.1) over (2:1.02.155-2ubuntu6) ...
+Preparing to unpack .../03-libnetplan0_0.99-0ubuntu3~19.10.2_amd64.deb ...
+Unpacking libnetplan0:amd64 (0.99-0ubuntu3~19.10.2) over (0.99-0ubuntu3~19.10.1)
+ ...
+Preparing to unpack .../04-netplan.io_0.99-0ubuntu3~19.10.2_amd64.deb ...
+Unpacking netplan.io (0.99-0ubuntu3~19.10.2) over (0.99-0ubuntu3~19.10.1) ...
+Preparing to unpack .../05-python-apt-common_1.9.0ubuntu1.4_all.deb ...
+Unpacking python-apt-common (1.9.0ubuntu1.4) over (1.9.0ubuntu1.3) ...
+Preparing to unpack .../06-python3-apt_1.9.0ubuntu1.4_amd64.deb ...
+Unpacking python3-apt (1.9.0ubuntu1.4) over (1.9.0ubuntu1.3) ...
+Preparing to unpack .../07-aptdaemon_1.1.1+bzr982-0ubuntu28.2_all.deb ...
+Unpacking aptdaemon (1.1.1+bzr982-0ubuntu28.2) over (1.1.1+bzr982-0ubuntu28.1) .
+..
+Preparing to unpack .../08-python3-aptdaemon.gtk3widgets_1.1.1+bzr982-0ubuntu28.
+2_all.deb ...
+Unpacking python3-aptdaemon.gtk3widgets (1.1.1+bzr982-0ubuntu28.2) over (1.1.1+b
+zr982-0ubuntu28.1) ...
+Preparing to unpack .../09-python3-aptdaemon_1.1.1+bzr982-0ubuntu28.2_all.deb ..
+.
+Unpacking python3-aptdaemon (1.1.1+bzr982-0ubuntu28.2) over (1.1.1+bzr982-0ubunt
+u28.1) ...
+Preparing to unpack .../10-aptdaemon-data_1.1.1+bzr982-0ubuntu28.2_all.deb ...
+Unpacking aptdaemon-data (1.1.1+bzr982-0ubuntu28.2) over (1.1.1+bzr982-0ubuntu28
+.1) ...
+Preparing to unpack .../11-python3-update-manager_1%3a19.04.8.1_all.deb ...
+Unpacking python3-update-manager (1:19.04.8.1) over (1:19.04.8) ...
+Preparing to unpack .../12-update-manager-core_1%3a19.04.8.1_all.deb ...
+Unpacking update-manager-core (1:19.04.8.1) over (1:19.04.8) ...
+Preparing to unpack .../13-update-manager_1%3a19.04.8.1_all.deb ...
+Unpacking update-manager (1:19.04.8.1) over (1:19.04.8) ...
+Preparing to unpack .../14-python3-problem-report_2.20.11-0ubuntu8.9_all.deb ...
+Unpacking python3-problem-report (2.20.11-0ubuntu8.9) over (2.20.11-0ubuntu8.8) 
+...
+Preparing to unpack .../15-python3-apport_2.20.11-0ubuntu8.9_all.deb ...
+Unpacking python3-apport (2.20.11-0ubuntu8.9) over (2.20.11-0ubuntu8.8) ...
+Preparing to unpack .../16-apport_2.20.11-0ubuntu8.9_all.deb ...
+Unpacking apport (2.20.11-0ubuntu8.9) over (2.20.11-0ubuntu8.8) ...
+Preparing to unpack .../17-apport-gtk_2.20.11-0ubuntu8.9_all.deb ...
+Unpacking apport-gtk (2.20.11-0ubuntu8.9) over (2.20.11-0ubuntu8.8) ...
+Preparing to unpack .../18-chromium-codecs-ffmpeg-extra_81.0.4044.129-0ubuntu0.1
+9.10.1_amd64.deb ...
+Unpacking chromium-codecs-ffmpeg-extra (81.0.4044.129-0ubuntu0.19.10.1) over (79
+.0.3945.79-0ubuntu0.19.10.2) ...
+Preparing to unpack .../19-libdevmapper-event1.02.1_2%3a1.02.155-2ubuntu6.1_amd6
+4.deb ...
+Unpacking libdevmapper-event1.02.1:amd64 (2:1.02.155-2ubuntu6.1) over (2:1.02.15
+5-2ubuntu6) ...
+Preparing to unpack .../20-liblvm2cmd2.03_2.03.02-2ubuntu6.1_amd64.deb ...
+Unpacking liblvm2cmd2.03:amd64 (2.03.02-2ubuntu6.1) over (2.03.02-2ubuntu6) ...
+Preparing to unpack .../21-dmeventd_2%3a1.02.155-2ubuntu6.1_amd64.deb ...
+Unpacking dmeventd (2:1.02.155-2ubuntu6.1) over (2:1.02.155-2ubuntu6) ...
+Preparing to unpack .../22-libvncclient1_0.9.11+dfsg-1.3ubuntu0.1_amd64.deb ...
+Unpacking libvncclient1:amd64 (0.9.11+dfsg-1.3ubuntu0.1) over (0.9.11+dfsg-1.3) 
+...
+Selecting previously unselected package linux-modules-5.3.0-62-generic.
+Preparing to unpack .../23-linux-modules-5.3.0-62-generic_5.3.0-62.56_amd64.deb 
+...
+Unpacking linux-modules-5.3.0-62-generic (5.3.0-62.56) ...
+Selecting previously unselected package linux-image-5.3.0-62-generic.
+Preparing to unpack .../24-linux-image-5.3.0-62-generic_5.3.0-62.56_amd64.deb ..
+.
+Unpacking linux-image-5.3.0-62-generic (5.3.0-62.56) ...
+Selecting previously unselected package linux-modules-extra-5.3.0-62-generic.
+Preparing to unpack .../25-linux-modules-extra-5.3.0-62-generic_5.3.0-62.56_amd6
+4.deb ...
+Unpacking linux-modules-extra-5.3.0-62-generic (5.3.0-62.56) ...
+Preparing to unpack .../26-linux-generic_5.3.0.62.52_amd64.deb ...
+Unpacking linux-generic (5.3.0.62.52) over (5.3.0.61.51) ...
+Preparing to unpack .../27-linux-image-generic_5.3.0.62.52_amd64.deb ...
+Unpacking linux-image-generic (5.3.0.62.52) over (5.3.0.61.51) ...
+Selecting previously unselected package linux-headers-5.3.0-62.
+Preparing to unpack .../28-linux-headers-5.3.0-62_5.3.0-62.56_all.deb ...
+Unpacking linux-headers-5.3.0-62 (5.3.0-62.56) ...
+Selecting previously unselected package linux-headers-5.3.0-62-generic.
+Preparing to unpack .../29-linux-headers-5.3.0-62-generic_5.3.0-62.56_amd64.deb 
+...
+Unpacking linux-headers-5.3.0-62-generic (5.3.0-62.56) ...
+Preparing to unpack .../30-linux-headers-generic_5.3.0.62.52_amd64.deb ...
+Unpacking linux-headers-generic (5.3.0.62.52) over (5.3.0.61.51) ...
+Preparing to unpack .../31-linux-libc-dev_5.3.0-62.56_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.3.0-62.56) over (5.3.0-61.55) ...
+Preparing to unpack .../32-lvm2_2.03.02-2ubuntu6.1_amd64.deb ...
+Unpacking lvm2 (2.03.02-2ubuntu6.1) over (2.03.02-2ubuntu6) ...
+Setting up google-chrome-stable (83.0.4103.116-1) ...
+Setting up chromium-codecs-ffmpeg-extra (81.0.4044.129-0ubuntu0.19.10.1) ...
+Setting up python3-problem-report (2.20.11-0ubuntu8.9) ...
+Setting up linux-modules-5.3.0-62-generic (5.3.0-62.56) ...
+Setting up linux-libc-dev:amd64 (5.3.0-62.56) ...
+Setting up libnetplan0:amd64 (0.99-0ubuntu3~19.10.2) ...
+Setting up netplan.io (0.99-0ubuntu3~19.10.2) ...
+Setting up libvncclient1:amd64 (0.9.11+dfsg-1.3ubuntu0.1) ...
+Setting up libdevmapper1.02.1:amd64 (2:1.02.155-2ubuntu6.1) ...
+Setting up python-apt-common (1.9.0ubuntu1.4) ...
+Setting up dmsetup (2:1.02.155-2ubuntu6.1) ...
+update-initramfs: deferring update (trigger activated)
+Setting up aptdaemon-data (1.1.1+bzr982-0ubuntu28.2) ...
+Setting up linux-headers-5.3.0-62 (5.3.0-62.56) ...
+Setting up linux-headers-5.3.0-62-generic (5.3.0-62.56) ...
+/etc/kernel/header_postinst.d/dkms:
+ * dkms: running auto installation service for kernel 5.3.0-62-generic
+   ...done.
+Setting up linux-image-5.3.0-62-generic (5.3.0-62.56) ...
+I: /boot/vmlinuz.old is now a symlink to vmlinuz-5.3.0-61-generic
+I: /boot/initrd.img.old is now a symlink to initrd.img-5.3.0-61-generic
+I: /boot/vmlinuz is now a symlink to vmlinuz-5.3.0-62-generic
+I: /boot/initrd.img is now a symlink to initrd.img-5.3.0-62-generic
+Setting up linux-modules-extra-5.3.0-62-generic (5.3.0-62.56) ...
+Setting up libdevmapper-event1.02.1:amd64 (2:1.02.155-2ubuntu6.1) ...
+Setting up python3-apt (1.9.0ubuntu1.4) ...
+Setting up linux-headers-generic (5.3.0.62.52) ...
+Setting up python3-apport (2.20.11-0ubuntu8.9) ...
+Setting up python3-update-manager (1:19.04.8.1) ...
+Setting up linux-image-generic (5.3.0.62.52) ...
+Setting up linux-generic (5.3.0.62.52) ...
+Setting up apport (2.20.11-0ubuntu8.9) ...
+apport-autoreport.service is a disabled or a static unit, not starting it.
+Setting up update-manager-core (1:19.04.8.1) ...
+Setting up apport-gtk (2.20.11-0ubuntu8.9) ...
+Setting up aptdaemon (1.1.1+bzr982-0ubuntu28.2) ...
+Setting up python3-aptdaemon (1.1.1+bzr982-0ubuntu28.2) ...
+Setting up liblvm2cmd2.03:amd64 (2.03.02-2ubuntu6.1) ...
+Setting up dmeventd (2:1.02.155-2ubuntu6.1) ...
+dm-event.service is a disabled or a static unit not running, not starting it.
+Setting up python3-aptdaemon.gtk3widgets (1.1.1+bzr982-0ubuntu28.2) ...
+Setting up update-manager (1:19.04.8.1) ...
+Setting up lvm2 (2.03.02-2ubuntu6.1) ...
+update-initramfs: deferring update (trigger activated)
+Processing triggers for dbus (1.12.14-1ubuntu2.1) ...
+Processing triggers for desktop-file-utils (0.24-1ubuntu1) ...
+Processing triggers for mime-support (3.63ubuntu1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.32.0-1ubuntu1) ...
+Processing triggers for libglib2.0-0:amd64 (2.62.4-1~ubuntu19.10.2) ...
+Processing triggers for libc-bin (2.30-0ubuntu2.1) ...
+Processing triggers for systemd (242-7ubuntu3.11) ...
+Processing triggers for man-db (2.8.7-3) ...
+Processing triggers for initramfs-tools (0.133ubuntu10) ...
+update-initramfs: Generating /boot/initrd.img-5.3.0-61-generic
+I: The initramfs will attempt to resume from /dev/dm-1
+I: (/dev/mapper/vgubuntu-swap_1)
+I: Set the RESUME variable to override this.
+Processing triggers for linux-image-5.3.0-62-generic (5.3.0-62.56) ...
+/etc/kernel/postinst.d/dkms:
+ * dkms: running auto installation service for kernel 5.3.0-62-generic
+   ...done.
+/etc/kernel/postinst.d/initramfs-tools:
+update-initramfs: Generating /boot/initrd.img-5.3.0-62-generic
+I: The initramfs will attempt to resume from /dev/dm-1
+I: (/dev/mapper/vgubuntu-swap_1)
+I: Set the RESUME variable to override this.
+/etc/kernel/postinst.d/vboxadd:
+VirtualBox Guest Additions: Building the modules for kernel 5.3.0-62-generic.
+update-initramfs: deferring update (hook will be called later)
+/etc/kernel/postinst.d/zz-update-grub:
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/init-select.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-5.3.0-62-generic
+Found initrd image: /boot/initrd.img-5.3.0-62-generic
+Found linux image: /boot/vmlinuz-5.3.0-61-generic
+Found initrd image: /boot/initrd.img-5.3.0-61-generic
+Found linux image: /boot/vmlinuz-5.3.0-59-generic
+Found initrd image: /boot/initrd.img-5.3.0-59-generic
+Found linux image: /boot/vmlinuz-5.3.0-18-generic
+Found initrd image: /boot/initrd.img-5.3.0-18-generic
+Found memtest86+ image: /boot/memtest86+.elf
+Found memtest86+ image: /boot/memtest86+.bin
+done
+pk@ubuntuwork:~/git/DeepLearning$ sudo apt install build-essential curl file gi
+[sudo] password for pk: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package gi
+pk@ubuntuwork:~/git/DeepLearning$ git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew
+Cloning into '/home/pk/.linuxbrew'...
+fatal: unable to access 'https://github.com/Homebrew/linuxbrew.git/': Could not resolve host: github.com
+pk@ubuntuwork:~/git/DeepLearning$ git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew^C
+pk@ubuntuwork:~/git/DeepLearning$ pwd
+/home/pk/git/DeepLearning
+pk@ubuntuwork:~/git/DeepLearning$ cd
+pk@ubuntuwork:~$ pwd
+/home/pk
+pk@ubuntuwork:~$ ls -a
+.              .condarc          .gnupg     .profile
+..             .config           .ipython   Public
+.anaconda      .continuum        .java      pycharm
+.aws           Desktop           .jupyter   .python_history
+aws            .docker           .keras     .ssh
+awscliv2.zip   Documents         .local     .sudo_as_admin_successful
+.bash_history  Downloads         .mozilla   Templates
+.bash_logout   .eclipse          Music      tmp
+.bashrc        git               notebooks  .vboxclient-display.pid
+.cache         .gitconfig        .p2        .vboxclient-draganddrop.pid
+coderepo       .git-credentials  Pictures   .vboxclient-seamless.pid
+.conda         .gnome            .pki       Videos
+pk@ubuntuwork:~$ git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew
+Cloning into '/home/pk/.linuxbrew'...
+remote: Enumerating objects: 353749, done.
+remote: Total 353749 (delta 0), reused 0 (delta 0), pack-reused 353749
+Receiving objects: 100% (353749/353749), 68.00 MiB | 7.13 MiB/s, done.
+Resolving deltas: 100% (267333/267333), done.
+pk@ubuntuwork:~$ ls -al
+total 32280
+drwxr-xr-x 36 pk   pk         4096 Jul  1 21:26 .
+drwxr-xr-x  4 root root       4096 Apr 11 19:27 ..
+drwxr-xr-x  3 pk   pk         4096 Jun 17 11:51 .anaconda
+drwxr-xr-x  2 pk   docker     4096 May 15 20:12 .aws
+drwxr-xr-x  3 pk   docker     4096 May 14 22:24 aws
+-rw-r--r--  1 pk   docker 32850566 May 15 15:41 awscliv2.zip
+-rw-------  1 pk   pk         4356 Jul  1 11:38 .bash_history
+-rw-r--r--  1 pk   pk          220 Apr  7 22:24 .bash_logout
+-rw-r--r--  1 pk   pk         4287 Jun 20 23:21 .bashrc
+drwx------ 24 pk   pk         4096 Jun 29 21:55 .cache
+drwxr-xr-x  3 pk   docker     4096 May 15 20:31 coderepo
+drwxr-xr-x  3 pk   pk         4096 Jun 29 23:08 .conda
+-rw-r--r--  1 pk   pk           66 Jun 29 22:01 .condarc
+drwxr-x--- 21 pk   pk         4096 Jun 29 22:06 .config
+drwxr-xr-x  3 pk   pk         4096 Jun 29 22:06 .continuum
+drwxr-xr-x  2 pk   pk         4096 Apr  7 23:30 Desktop
+drwx------  2 pk   docker     4096 May 15 20:49 .docker
+drwxr-xr-x  6 pk   pk         4096 Jun 17 20:18 Documents
+drwxr-xr-x  7 pk   pk         4096 Jul  1 11:33 Downloads
+drwxr-xr-x  5 pk   pk         4096 Apr  8 00:00 .eclipse
+drwxr-xr-x  3 pk   pk         4096 Jul  1 11:49 git
+-rw-r--r--  1 pk   docker       48 May 15 20:36 .gitconfig
+-rw-------  1 pk   pk           57 Jun 29 14:20 .git-credentials
+drwx------  3 pk   pk         4096 May 15 16:01 .gnome
+drwx------  3 pk   pk         4096 May 15 13:22 .gnupg
+drwxr-xr-x  5 pk   pk         4096 Jun 17 12:44 .ipython
+drwxr-xr-x  4 pk   pk         4096 Jun 29 21:55 .java
+drwxr-xr-x  2 pk   pk         4096 Jun 17 20:16 .jupyter
+drwxr-xr-x  3 pk   pk         4096 Jun 30 12:21 .keras
+drwxr-xr-x  7 pk   pk         4096 Jul  1 21:26 .linuxbrew
+drwx------  3 pk   pk         4096 Apr  7 23:30 .local
+drwx------  5 pk   pk         4096 Apr  7 23:45 .mozilla
+drwxr-xr-x  2 pk   pk         4096 Apr  7 23:30 Music
+drwxr-xr-x  6 pk   pk         4096 Jun 29 21:46 notebooks
+drwxr-xr-x  3 pk   pk         4096 Apr  8 00:00 .p2
+drwxr-xr-x  2 pk   pk         4096 Apr  7 23:30 Pictures
+drwx------  3 pk   pk         4096 May 15 16:00 .pki
+-rw-r--r--  1 pk   pk          807 Apr  7 22:24 .profile
+drwxr-xr-x  2 pk   pk         4096 Apr  7 23:30 Public
+drwxr-xr-x  5 pk   pk         4096 Jul  1 11:47 pycharm
+-rw-------  1 pk   pk           24 Jun 30 20:37 .python_history
+drwx------  2 pk   pk         4096 May 15 20:29 .ssh
+-rw-r--r--  1 pk   pk            0 Apr  7 23:50 .sudo_as_admin_successful
+drwxr-xr-x  2 pk   pk         4096 Apr  7 23:30 Templates
+drwxr-xr-x  2 pk   docker     4096 May 15 15:41 tmp
+-rw-r-----  1 pk   pk            5 Jun 26 11:14 .vboxclient-display.pid
+-rw-r-----  1 pk   pk            5 Jun 26 11:14 .vboxclient-draganddrop.pid
+-rw-r-----  1 pk   pk            5 Jun 26 11:14 .vboxclient-seamless.pid
+drwxr-xr-x  2 pk   pk         4096 Apr  7 23:30 Videos
+pk@ubuntuwork:~$ cd .linuxbrew/
+pk@ubuntuwork:~/.linuxbrew$ ls
+bin               Dockerfile       lib64    LICENSE.txt  share
+CODEOFCONDUCT.md  docker.test.yml  Library  README.md
+pk@ubuntuwork:~/.linuxbrew$ cd ..
+pk@ubuntuwork:~$ ls -a
+.              .config           .java       pycharm
+..             .continuum        .jupyter    .python_history
+.anaconda      Desktop           .keras      .ssh
+.aws           .docker           .linuxbrew  .sudo_as_admin_successful
+aws            Documents         .local      Templates
+awscliv2.zip   Downloads         .mozilla    tmp
+.bash_history  .eclipse          Music       .vboxclient-display.pid
+.bash_logout   git               notebooks   .vboxclient-draganddrop.pid
+.bashrc        .gitconfig        .p2         .vboxclient-seamless.pid
+.cache         .git-credentials  Pictures    Videos
+coderepo       .gnome            .pki
+.conda         .gnupg            .profile
+.condarc       .ipython          Public
+pk@ubuntuwork:~$ cp .bashrc bashrc_07012020
+pk@ubuntuwork:~$ ls -al
+total 32288
+drwxr-xr-x 36 pk   pk         4096 Jul  1 21:28 .
+drwxr-xr-x  4 root root       4096 Apr 11 19:27 ..
+drwxr-xr-x  3 pk   pk         4096 Jun 17 11:51 .anaconda
+drwxr-xr-x  2 pk   docker     4096 May 15 20:12 .aws
+drwxr-xr-x  3 pk   docker     4096 May 14 22:24 aws
+-rw-r--r--  1 pk   docker 32850566 May 15 15:41 awscliv2.zip
+-rw-------  1 pk   pk         4356 Jul  1 11:38 .bash_history
+-rw-r--r--  1 pk   pk          220 Apr  7 22:24 .bash_logout
+-rw-r--r--  1 pk   pk         4287 Jun 20 23:21 .bashrc
+-rw-r--r--  1 pk   pk         4287 Jul  1 21:28 bashrc_07012020
+drwx------ 24 pk   pk         4096 Jun 29 21:55 .cache
+drwxr-xr-x  3 pk   docker     4096 May 15 20:31 coderepo
+drwxr-xr-x  3 pk   pk         4096 Jun 29 23:08 .conda
+-rw-r--r--  1 pk   pk           66 Jun 29 22:01 .condarc
+drwxr-x--- 21 pk   pk         4096 Jun 29 22:06 .config
+drwxr-xr-x  3 pk   pk         4096 Jun 29 22:06 .continuum
+drwxr-xr-x  2 pk   pk         4096 Apr  7 23:30 Desktop
+drwx------  2 pk   docker     4096 May 15 20:49 .docker
+drwxr-xr-x  6 pk   pk         4096 Jun 17 20:18 Documents
+drwxr-xr-x  7 pk   pk         4096 Jul  1 11:33 Downloads
+drwxr-xr-x  5 pk   pk         4096 Apr  8 00:00 .eclipse
+drwxr-xr-x  3 pk   pk         4096 Jul  1 11:49 git
+-rw-r--r--  1 pk   docker       48 May 15 20:36 .gitconfig
+-rw-------  1 pk   pk           57 Jun 29 14:20 .git-credentials
+drwx------  3 pk   pk         4096 May 15 16:01 .gnome
+drwx------  3 pk   pk         4096 May 15 13:22 .gnupg
+drwxr-xr-x  5 pk   pk         4096 Jun 17 12:44 .ipython
+drwxr-xr-x  4 pk   pk         4096 Jun 29 21:55 .java
+drwxr-xr-x  2 pk   pk         4096 Jun 17 20:16 .jupyter
+drwxr-xr-x  3 pk   pk         4096 Jun 30 12:21 .keras
+drwxr-xr-x  7 pk   pk         4096 Jul  1 21:26 .linuxbrew
+drwx------  3 pk   pk         4096 Apr  7 23:30 .local
+drwx------  5 pk   pk         4096 Apr  7 23:45 .mozilla
+drwxr-xr-x  2 pk   pk         4096 Apr  7 23:30 Music
+drwxr-xr-x  6 pk   pk         4096 Jun 29 21:46 notebooks
+drwxr-xr-x  3 pk   pk         4096 Apr  8 00:00 .p2
+drwxr-xr-x  2 pk   pk         4096 Apr  7 23:30 Pictures
+drwx------  3 pk   pk         4096 May 15 16:00 .pki
+-rw-r--r--  1 pk   pk          807 Apr  7 22:24 .profile
+drwxr-xr-x  2 pk   pk         4096 Apr  7 23:30 Public
+drwxr-xr-x  5 pk   pk         4096 Jul  1 11:47 pycharm
+-rw-------  1 pk   pk           24 Jun 30 20:37 .python_history
+drwx------  2 pk   pk         4096 May 15 20:29 .ssh
+-rw-r--r--  1 pk   pk            0 Apr  7 23:50 .sudo_as_admin_successful
+drwxr-xr-x  2 pk   pk         4096 Apr  7 23:30 Templates
+drwxr-xr-x  2 pk   docker     4096 May 15 15:41 tmp
+-rw-r-----  1 pk   pk            5 Jun 26 11:14 .vboxclient-display.pid
+-rw-r-----  1 pk   pk            5 Jun 26 11:14 .vboxclient-draganddrop.pid
+-rw-r-----  1 pk   pk            5 Jun 26 11:14 .vboxclient-seamless.pid
+drwxr-xr-x  2 pk   pk         4096 Apr  7 23:30 Videos
+pk@ubuntuwork:~$ vi .bashrc
+pk@ubuntuwork:~$ source .bashrc
+pk@ubuntuwork:~$ brew install hello
+/home/pk/.linuxbrew/Library/brew.sh: line 177: exec: : not found
+pk@ubuntuwork:~$ which -a ruby
+pk@ubuntuwork:~$ sudo apt install ruby-full
+[sudo] password for pk: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  fonts-lato javascript-common libgmp-dev libgmpxx4ldbl libjs-jquery
+  libruby2.5 rake ri ruby ruby-dev ruby-did-you-mean ruby-minitest
+  ruby-net-telnet ruby-power-assert ruby-test-unit ruby-xmlrpc ruby2.5
+  ruby2.5-dev ruby2.5-doc rubygems-integration
+Suggested packages:
+  apache2 | lighttpd | httpd gmp-doc libgmp10-doc libmpfr-dev bundler
+The following NEW packages will be installed:
+  fonts-lato javascript-common libgmp-dev libgmpxx4ldbl libjs-jquery
+  libruby2.5 rake ri ruby ruby-dev ruby-did-you-mean ruby-full ruby-minitest
+  ruby-net-telnet ruby-power-assert ruby-test-unit ruby-xmlrpc ruby2.5
+  ruby2.5-dev ruby2.5-doc rubygems-integration
+0 upgraded, 21 newly installed, 0 to remove and 0 not upgraded.
+Need to get 8,582 kB of archives.
+After this operation, 49.0 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 fonts-lato all 2.0-2 [2,698 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 javascript-common all 11 [6,066 B]
+Get:3 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgmpxx4ldbl amd64 2:6.1.2+dfsg-4 [9,096 B]
+Get:4 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgmp-dev amd64 2:6.1.2+dfsg-4 [312 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libjs-jquery all 3.3.1~dfsg-3 [329 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 rubygems-integration all 1.11 [4,994 B]
+Get:7 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 ruby2.5 amd64 2.5.5-4ubuntu2.1 [48.8 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 ruby amd64 1:2.5.1 [5,712 B]
+Get:9 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 rake all 12.3.1-3ubuntu0.1 [44.9 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 ruby-did-you-mean all 1.2.1-1 [9,828 B]
+Get:11 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 ruby-minitest all 5.11.3-1 [39.4 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 ruby-net-telnet all 0.1.1-2 [12.6 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 ruby-power-assert all 1.1.1-1 [11.0 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 ruby-test-unit all 3.2.8-1 [61.4 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 ruby-xmlrpc all 0.3.0-2 [23.8 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 libruby2.5 amd64 2.5.5-4ubuntu2.1 [3,092 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 ruby2.5-doc all 2.5.5-4ubuntu2.1 [1,799 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 ri all 1:2.5.1 [4,496 B]
+Get:19 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 ruby2.5-dev amd64 2.5.5-4ubuntu2.1 [63.8 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 ruby-dev amd64 1:2.5.1 [4,604 B]
+Get:21 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 ruby-full all 1:2.5.1 [2,716 B]
+Fetched 8,582 kB in 23s (380 kB/s)
+Selecting previously unselected package fonts-lato.
+(Reading database ... 286680 files and directories currently installed.)
+Preparing to unpack .../00-fonts-lato_2.0-2_all.deb ...
+Unpacking fonts-lato (2.0-2) ...
+Selecting previously unselected package javascript-common.
+Preparing to unpack .../01-javascript-common_11_all.deb ...
+Unpacking javascript-common (11) ...
+Selecting previously unselected package libgmpxx4ldbl:amd64.
+Preparing to unpack .../02-libgmpxx4ldbl_2%3a6.1.2+dfsg-4_amd64.deb ...
+Unpacking libgmpxx4ldbl:amd64 (2:6.1.2+dfsg-4) ...
+Selecting previously unselected package libgmp-dev:amd64.
+Preparing to unpack .../03-libgmp-dev_2%3a6.1.2+dfsg-4_amd64.deb ...
+Unpacking libgmp-dev:amd64 (2:6.1.2+dfsg-4) ...
+Selecting previously unselected package libjs-jquery.
+Preparing to unpack .../04-libjs-jquery_3.3.1~dfsg-3_all.deb ...
+Unpacking libjs-jquery (3.3.1~dfsg-3) ...
+Selecting previously unselected package rubygems-integration.
+Preparing to unpack .../05-rubygems-integration_1.11_all.deb ...
+Unpacking rubygems-integration (1.11) ...
+Selecting previously unselected package ruby2.5.
+Preparing to unpack .../06-ruby2.5_2.5.5-4ubuntu2.1_amd64.deb ...
+Unpacking ruby2.5 (2.5.5-4ubuntu2.1) ...
+Selecting previously unselected package ruby.
+Preparing to unpack .../07-ruby_1%3a2.5.1_amd64.deb ...
+Unpacking ruby (1:2.5.1) ...
+Selecting previously unselected package rake.
+Preparing to unpack .../08-rake_12.3.1-3ubuntu0.1_all.deb ...
+Unpacking rake (12.3.1-3ubuntu0.1) ...
+Selecting previously unselected package ruby-did-you-mean.
+Preparing to unpack .../09-ruby-did-you-mean_1.2.1-1_all.deb ...
+Unpacking ruby-did-you-mean (1.2.1-1) ...
+Selecting previously unselected package ruby-minitest.
+Preparing to unpack .../10-ruby-minitest_5.11.3-1_all.deb ...
+Unpacking ruby-minitest (5.11.3-1) ...
+Selecting previously unselected package ruby-net-telnet.
+Preparing to unpack .../11-ruby-net-telnet_0.1.1-2_all.deb ...
+Unpacking ruby-net-telnet (0.1.1-2) ...
+Selecting previously unselected package ruby-power-assert.
+Preparing to unpack .../12-ruby-power-assert_1.1.1-1_all.deb ...
+Unpacking ruby-power-assert (1.1.1-1) ...
+Selecting previously unselected package ruby-test-unit.
+Preparing to unpack .../13-ruby-test-unit_3.2.8-1_all.deb ...
+Unpacking ruby-test-unit (3.2.8-1) ...
+Selecting previously unselected package ruby-xmlrpc.
+Preparing to unpack .../14-ruby-xmlrpc_0.3.0-2_all.deb ...
+Unpacking ruby-xmlrpc (0.3.0-2) ...
+Selecting previously unselected package libruby2.5:amd64.
+Preparing to unpack .../15-libruby2.5_2.5.5-4ubuntu2.1_amd64.deb ...
+Unpacking libruby2.5:amd64 (2.5.5-4ubuntu2.1) ...
+Selecting previously unselected package ruby2.5-doc.
+Preparing to unpack .../16-ruby2.5-doc_2.5.5-4ubuntu2.1_all.deb ...
+Unpacking ruby2.5-doc (2.5.5-4ubuntu2.1) ...
+Selecting previously unselected package ri.
+Preparing to unpack .../17-ri_1%3a2.5.1_all.deb ...
+Unpacking ri (1:2.5.1) ...
+Selecting previously unselected package ruby2.5-dev:amd64.
+Preparing to unpack .../18-ruby2.5-dev_2.5.5-4ubuntu2.1_amd64.deb ...
+Unpacking ruby2.5-dev:amd64 (2.5.5-4ubuntu2.1) ...
+Selecting previously unselected package ruby-dev:amd64.
+Preparing to unpack .../19-ruby-dev_1%3a2.5.1_amd64.deb ...
+Unpacking ruby-dev:amd64 (1:2.5.1) ...
+Selecting previously unselected package ruby-full.
+Preparing to unpack .../20-ruby-full_1%3a2.5.1_all.deb ...
+Unpacking ruby-full (1:2.5.1) ...
+Setting up javascript-common (11) ...
+Setting up fonts-lato (2.0-2) ...
+Setting up ruby-power-assert (1.1.1-1) ...
+Setting up rubygems-integration (1.11) ...
+Setting up ruby-minitest (5.11.3-1) ...
+Setting up libgmpxx4ldbl:amd64 (2:6.1.2+dfsg-4) ...
+Setting up ruby-test-unit (3.2.8-1) ...
+Setting up ruby-net-telnet (0.1.1-2) ...
+Setting up libjs-jquery (3.3.1~dfsg-3) ...
+Setting up ruby-did-you-mean (1.2.1-1) ...
+Setting up ruby-xmlrpc (0.3.0-2) ...
+Setting up ruby2.5-doc (2.5.5-4ubuntu2.1) ...
+Setting up libgmp-dev:amd64 (2:6.1.2+dfsg-4) ...
+Setting up ruby2.5 (2.5.5-4ubuntu2.1) ...
+Setting up ri (1:2.5.1) ...
+Setting up ruby (1:2.5.1) ...
+Setting up rake (12.3.1-3ubuntu0.1) ...
+Setting up libruby2.5:amd64 (2.5.5-4ubuntu2.1) ...
+Setting up ruby2.5-dev:amd64 (2.5.5-4ubuntu2.1) ...
+Setting up ruby-dev:amd64 (1:2.5.1) ...
+Setting up ruby-full (1:2.5.1) ...
+Processing triggers for fontconfig (2.13.1-2ubuntu2) ...
+Processing triggers for libc-bin (2.30-0ubuntu2.1) ...
+Processing triggers for man-db (2.8.7-3) ...
+pk@ubuntuwork:~$ which -a ruby
+/usr/bin/ruby
+/bin/ruby
+pk@ubuntuwork:~$ brew install hello
+Error: cannot load such file -- os/linux/glibc
+Please report this bug:
+    https://github.com/Linuxbrew/linuxbrew/blob/master/share/doc/homebrew/Troubleshooting.md#troubleshooting
+/usr/lib/ruby/2.5.0/rubygems/core_ext/kernel_require.rb:59:in `require'
+/usr/lib/ruby/2.5.0/rubygems/core_ext/kernel_require.rb:59:in `require'
+/home/pk/.linuxbrew/Library/Taps/homebrew/homebrew-core/Formula/glibc.rb:1:in `load_formula'
+/home/pk/.linuxbrew/Library/Homebrew/formulary.rb:21:in `module_eval'
+/home/pk/.linuxbrew/Library/Homebrew/formulary.rb:21:in `load_formula'
+/home/pk/.linuxbrew/Library/Homebrew/formulary.rb:34:in `load_formula_from_path'
+/home/pk/.linuxbrew/Library/Homebrew/formulary.rb:83:in `load_file'
+/home/pk/.linuxbrew/Library/Homebrew/formulary.rb:74:in `klass'
+/home/pk/.linuxbrew/Library/Homebrew/formulary.rb:70:in `get_formula'
+/home/pk/.linuxbrew/Library/Homebrew/formulary.rb:207:in `factory'
+/home/pk/.linuxbrew/Library/Homebrew/formula.rb:1186:in `[]'
+/home/pk/.linuxbrew/Library/Homebrew/cmd/install.rb:200:in `check_ld_so_symlink'
+/home/pk/.linuxbrew/Library/Homebrew/cmd/install.rb:213:in `perform_preinstall_checks'
+/home/pk/.linuxbrew/Library/Homebrew/cmd/install.rb:91:in `install'
+/home/pk/.linuxbrew/Library/brew.rb:84:in `<main>'
+pk@ubuntuwork:~$ sudo brew install hello
+sudo: brew: command not found
+pk@ubuntuwork:~$ brew update
+remote: Enumerating objects: 1917, done.
+remote: Counting objects: 100% (1917/1917), done.
+remote: Compressing objects: 100% (1617/1617), done.
+remote: Total 1764 (delta 179), reused 910 (delta 70), pack-reused 0
+Receiving objects: 100% (1764/1764), 2.01 MiB | 6.16 MiB/s, done.
+Resolving deltas: 100% (179/179), completed with 51 local objects.
+From https://github.com/Linuxbrew/brew
+ + 532040391b...93389fde63 master     -> origin/master  (forced update)
+ * [new tag]               1.9.4      -> 1.9.4
+HEAD is now at 93389fde63 README.md: Linuxbrew has been merged into Homebrew (#942)
+/home/pk/.linuxbrew/Library/Homebrew/cmd/update.sh: line 6: /home/pk/.linuxbrew/Library/ENV/scm/git: No such file or directory
+pk@ubuntuwork:~$ brew update
+==> Migrating from Linuxbrew/brew to Homebrew/brew
+  Linuxbrew/brew has been merged into Homebrew/brew!
+  Linuxbrew/brew will no longer be updated.
+  Your git remote has been changed from
+     https://github.com/Linuxbrew/brew.git
+  to https://github.com/Homebrew/brew
+  See the blog post at https://brew.sh/2019/02/02/homebrew-2.0.0/
+Already up-to-date.
+pk@ubuntuwork:~$ brew doctor
+==> Downloading https://linuxbrew.bintray.com/bottles-portable-ruby/portable-ruby-2.6.3_2.x86_64_linux.bottle.tar.gz
+######################################################################### 100.0%
+==> Pouring portable-ruby-2.6.3_2.x86_64_linux.bottle.tar.gz
+Please note that these warnings are just used to help the Homebrew maintainers
+with debugging if you file an issue. If everything you use Homebrew for is
+working fine: please don't worry or file an issue; just ignore this. Thanks!
+
+Warning: Suspicious https://github.com/Homebrew/linuxbrew-core git origin remote found.
+The current git origin is:
+  https://github.com/Linuxbrew/homebrew-core
+
+With a non-standard origin, Homebrew won't update properly.
+You can solve this by setting the origin remote:
+  git -C "/home/pk/.linuxbrew/Library/Taps/homebrew/homebrew-core" remote set-url origin https://github.com/Homebrew/linuxbrew-core
+
+Warning: The following directories do not exist:
+/home/pk/.linuxbrew/etc
+/home/pk/.linuxbrew/include
+/home/pk/.linuxbrew/lib
+/home/pk/.linuxbrew/opt
+/home/pk/.linuxbrew/sbin
+/home/pk/.linuxbrew/share
+/home/pk/.linuxbrew/var/homebrew/linked
+
+You should create these directories and change their ownership to your account.
+  sudo mkdir -p /home/pk/.linuxbrew/etc /home/pk/.linuxbrew/include /home/pk/.linuxbrew/lib /home/pk/.linuxbrew/opt /home/pk/.linuxbrew/sbin /home/pk/.linuxbrew/share /home/pk/.linuxbrew/var/homebrew/linked
+  sudo chown -R $(whoami) /home/pk/.linuxbrew/etc /home/pk/.linuxbrew/include /home/pk/.linuxbrew/lib /home/pk/.linuxbrew/opt /home/pk/.linuxbrew/sbin /home/pk/.linuxbrew/share /home/pk/.linuxbrew/var/homebrew/linked
+
+Warning: "config" scripts exist outside your system or Homebrew directories.
+`./configure` scripts often look for *-config scripts to determine if
+software packages are installed, and which additional flags to use when
+compiling and linking.
+
+Having additional scripts in your path can confuse software installed via
+Homebrew if the config script overrides a system or Homebrew-provided
+script of the same name. We found the following "config" scripts:
+  /opt/anaconda3/bin/freetype-config
+  /opt/anaconda3/bin/curl-config
+  /opt/anaconda3/bin/ncursesw6-config
+  /opt/anaconda3/bin/libpng-config
+  /opt/anaconda3/bin/pcre-config
+  /opt/anaconda3/bin/krb5-config
+  /opt/anaconda3/bin/icu-config
+  /opt/anaconda3/bin/python3.7-config
+  /opt/anaconda3/bin/xslt-config
+  /opt/anaconda3/bin/python3.7m-config
+  /opt/anaconda3/bin/python3-config
+  /opt/anaconda3/bin/libpng16-config
+  /opt/anaconda3/bin/xml2-config
+
+Warning: Your Homebrew's prefix is not /home/linuxbrew/.linuxbrew.
+Some of Homebrew's bottles (binary packages) can only be used with the default
+prefix (/home/linuxbrew/.linuxbrew).
+You will encounter build failures with some formulae.
+Please create pull requests instead of asking for help on Homebrew's GitHub,
+Discourse, Twitter or IRC. You are responsible for resolving any issues you
+experience while you are running this unsupported configuration.
+
+pk@ubuntuwork:~$ brew install hello
+Updating Homebrew...
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics have been recorded yet (or will be during this `brew` run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+==> Downloading https://linuxbrew.bintray.com/bottles/patchelf-0.10.x86_64_linux
+==> Downloading from https://akamai.bintray.com/7f/7f19eacef4e3d18d9c82a4f4060bd
+######################################################################## 100.0%
+==> Downloading https://linuxbrew.bintray.com/bottles/hello-2.10.x86_64_linux.bo
+######################################################################## 100.0%
+==> Installing dependencies for hello: patchelf
+==> Installing hello dependency: patchelf
+==> Pouring patchelf-0.10.x86_64_linux.bottle.1.tar.gz
+🍺  /home/pk/.linuxbrew/Cellar/patchelf/0.10: 8 files, 921.5KB
+==> Installing hello
+==> Pouring hello-2.10.x86_64_linux.bottle.tar.gz
+🍺  /home/pk/.linuxbrew/Cellar/hello/2.10: 52 files, 591.5KB
+

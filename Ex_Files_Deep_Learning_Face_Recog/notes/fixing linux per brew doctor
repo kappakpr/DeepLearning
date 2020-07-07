@@ -1,0 +1,4 @@
+k@ubuntuwork:~$ sudo mkdir -p /home/pk/.linuxbrew/etc /home/pk/.linuxbrew/include /home/pk/.linuxbrew/lib /home/pk/.linuxbrew/opt /home/pk/.linuxbrew/sbin /home/pk/.linuxbrew/share /home/pk/.linuxbrew/var/homebrew/linked
+[sudo] password for pk: 
+pk@ubuntuwork:~$ sudo chown -R $(whoami) /home/pk/.linuxbrew/etc /home/pk/.linuxbrew/include /home/pk/.linuxbrew/lib /home/pk/.linuxbrew/opt /home/pk/.linuxbrew/sbin /home/pk/.linuxbrew/share /home/pk/.linuxbrew/var/homebrew/linked
+
