@@ -54,3 +54,7 @@ print(f"vocab size {vocab_size}")
 encoder = tfds.features.text.TokenTextEncoder(vocabulary_set)
 
 for reviews in train_dataset.take(5):
+    review_text = reviews['data']
+    print(review_text.get('review_body').numpy())
+    encoded_example = encoder.encode(review_text.get('review_body').numpy())
+    print(encoded_example)
