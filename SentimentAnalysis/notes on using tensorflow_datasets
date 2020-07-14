@@ -1,0 +1,23 @@
+got an error when trying to import tensorflow_datasets
+
+installed it with the command pip install tensorflow-datasets
+
+upgraded tensorflow
+
+pip install --upgrade pip
+pip install tensorflow
+
+
+got error that attr is missing
+
+sudo pip3 install attrs
+
+if attr already existed uninstall
+make sure it is uninstalled globally and for local user
+
+sudo pip uninstall attr
+
+sudo pip3 uninstall attr
+
+
+
