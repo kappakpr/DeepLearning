@@ -29,3 +29,28 @@ train_dataset = train_dataset.shuffle(BUFFER_SIZE, reshuffle_each_iteration=Fals
 for reviews in train_dataset.take(5):
     print(reviews)
 
+for reviews in train_dataset.take(20):
+    review_text = reviews['data']
+    print(review_text.get('review_body').numpy())
+    print(review_text.get('star_rating'))
+    print(tf.where(review_text.get('star_rating')>3,1,0).numpy())
+
+tokenizer = tfds.features.text.Tokenizer()
+
+vocabulary_set = set()
+
+# for all data just .enumerate():
+for _, reviews in train_dataset.take(1000).enumerate():
+    #print(reviews)
+    review_text = reviews['data']
+    reviews_tokens = tokenizer.tokenize(review_text.get('review_body').numpy())
+    vocabulary_set.update(reviews_tokens)
+
+#print(vocabulary_set)
+
+vocab_size = len(vocabulary_set)
+print(f"vocab size {vocab_size}")
+
+encoder = tfds.features.text.TokenTextEncoder(vocabulary_set)
+
+for reviews in train_dataset.take(5):
