@@ -108,3 +108,27 @@ print(sample_labels[1])
 
 for f0,f1 in test_data.take(10):
     print(tf.unique_with_counts(f1)[2].numpy())
+
+print("model define started")
+model = tf.keras.Sequential()
+model.add(tf.keras.layers.Embedding(vocab_size,128))
+model.add(tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(128,return_sequences=True)))
+model.add(tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(64)))
+for units in [64,64]:
+    model.add(tf.keras.layers.Dense(units,activation='relu'))
+model.add(tf.keras.layers.Dense(1))
+
+print("set tensorboar callback and checkpoints")
+logdir = os.path.join("/home/pk/pycharm/logs",datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
+tensorboard_callback = tf.keras.callbacks.TensorBoard(logdir,histogram_freq=1)
+checkpointer = tf.keras.callbacks.ModelCheckpoint(filepath='/home/pk/pycharm/sentiment_analysis.hdf5',verbose=1,save_best_only=True)
+
+print("model compile started")
+model.compile(optimizer='adam',
+              loss=tf.keras.losses.BinaryCrossentropy(from_logits=True),
+              metrics=['accuracy'])
+
+print("model fit started")
+history=model.fit(train_data,epochs=2,validation_data=test_data,callbacks=[tensorboard_callback,checkpointer])
+
+model.save('/home/pk/pycharm/final_sentiment_analysis.hdf5')
