@@ -19,7 +19,7 @@ train_dataset=dataset['train']
 #print(f"length of the dataset {len(list(train_dataset))}")
 
 BUFFER_SIZE = 100
-BATCH_SIZE = 128
+BATCH_SIZE = 64
 
 #shuffle
 print("shuffle the data to make sure training data set is a good mix, small batch size can skew the training data")
@@ -96,9 +96,10 @@ train_data = train_data.padded_batch(BATCH_SIZE)
 test_data = ar_encoded_data.take(TAKE_SIZE)
 test_data = test_data.padded_batch(BATCH_SIZE)
 
-vocab_size += 1
+vocab_size += 1000
 print(f"vocab_size increased {vocab_size}")
-sample_text, sample_labels = next(iter(test_data))
+
+#sample_text, sample_labels = next(iter(test_data))
 
 #print(sample_text[0])
 #print(sample_labels[0])
@@ -111,10 +112,10 @@ sample_text, sample_labels = next(iter(test_data))
 
 print("model define started")
 model = tf.keras.Sequential()
-model.add(tf.keras.layers.Embedding(vocab_size + 1000,128))  # was getting an arrayoutbound kind of exception, so increased vocab size by 1000 randomly
-#model.add(tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(128,return_sequences=True)))
-#model.add(tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(64)))
-for units in [64]: #,64]:
+model.add(tf.keras.layers.Embedding(vocab_size,128))  # was getting an arrayoutbound kind of exception, so increased vocab size by 1000 randomly
+model.add(tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(128,return_sequences=True)))
+model.add(tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(64)))
+for units in [64,64]:
     model.add(tf.keras.layers.Dense(units,activation='relu'))
 model.add(tf.keras.layers.Dense(1))
 
@@ -139,3 +140,22 @@ model.save('/home/pk/pycharm/final_sentiment_analysis.hdf5')
 # model will predict -ve and +ve numbers and we have to interpret with a threshold
 
 print(model.layers)
+
+eval_loss, eval_acc = model.evaluate(test_data)
+for f0,f1 in test_data.take(1):
+  print(f"actual labels:- {f1}")
+  print(f"predicted labels:- {model.predict(f0)} +ve=1 and -ve=0")
+
+import matplotlib.pyplot as plt
+
+def plot_graphs(history,metric):
+  plt.plot(history.history[metric])
+  plt.plot(history.history['val_'+metric], '')
+  plt.xlabel("Epochs")
+  plt.ylabel(metric)
+  plt.legend([metric, 'val_'+metric])
+  plt.show()
+
+plot_graphs(history,'accuracy')
+
+plot_graphs(history,'loss')
