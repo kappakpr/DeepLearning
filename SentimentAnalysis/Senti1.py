@@ -18,8 +18,8 @@ print(f"info :- {info}")
 
 #print(f"length of the dataset {len(list(train_dataset))}")
 
-BUFFER_SIZE = 300
-BATCH_SIZE = 100
+BUFFER_SIZE = 30000
+BATCH_SIZE = 128
 
 #shuffle
 print("shuffle the data to make sure training data set is a good mix, small batch size can skew the training data")
@@ -40,7 +40,7 @@ tokenizer = tfds.features.text.Tokenizer()
 vocabulary_set = set()
 
 # for all data just .enumerate():
-for _, reviews in train_dataset.take(1000).enumerate():
+for _, reviews in train_dataset.take(600).enumerate():
     #print(reviews)
     review_text = reviews['data']
     reviews_tokens = tokenizer.tokenize(review_text.get('review_body').numpy())
@@ -118,6 +118,8 @@ for units in [64,64]:
     model.add(tf.keras.layers.Dense(units,activation='relu'))
 model.add(tf.keras.layers.Dense(1))
 
+print(f"model summary :- {model.summary()}")
+
 print("set tensorboar callback and checkpoints")
 logdir = os.path.join("/home/pk/pycharm/logs",datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
 tensorboard_callback = tf.keras.callbacks.TensorBoard(logdir,histogram_freq=1)
@@ -132,3 +134,8 @@ print("model fit started")
 history=model.fit(train_data,epochs=2,validation_data=test_data,callbacks=[tensorboard_callback,checkpointer])
 
 model.save('/home/pk/pycharm/final_sentiment_analysis.hdf5')
+
+# we didn't use a sigmoid function, we used a linear function so we won't predict 0 and 1
+# model will predict -ve and +ve numbers and we have to interpret with a threshold
+
+print(model.layers)
